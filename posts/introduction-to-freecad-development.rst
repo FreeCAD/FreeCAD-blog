@@ -11,48 +11,60 @@ This is the first post in a series that aims to give you a basic understanding o
 
 Forum
 -----
-The FreeCAD forum: https://forum.freecadweb.org/ is the primary place for communication between FreeCAD users as well as developers. 
-This should be the first place to search for awnsers if you have any questions. 
+The FreeCAD forum: https://forum.freecadweb.org/ is the primary place for communication between FreeCAD users as well as developers.
+This should be the first place to search for answers if you have any questions.
 
-*Note:* When you create your account, it might take a while before its activated as the process is currently manual, this is to keep spam bots out.
+**Note:** When you create a forum account, it might take a while before it's activated as the process is currently manual. This is done to limit spamming.
 
 Issues/Tickets
 --------------
-FreeCAD uses mantis: https://freecadweb.org/tracker/ for bug reporting and feature requests, in order to create issues you will have to create an seperate mantis account. 
+| FreeCAD uses `MantisBT <https://mantisbt.org/>`_ as its tracker for bug reporting and feature requests.
+| The FreeCAD tracker address is https://freecadweb.org/tracker/
+| **Note:** In order to create issues you will have to create an separate MantisBT account.
 
 As we are getting a lot of reports please follow the rules before creating a new issue
 
-1. First post to forum to verify their issue.
-2. Link said thread to ticket and vice-a-versa; 
-3. Use the most updated stable or development versions of FreeCAD
-4. Post your Help>About FreeCAD>Copy to clipboard version info
-5. Post a Step-By-Step explanation on how to recreate the issue
-6. If possible, upload an example file to demonstrate problem. 
-
-Before you post an new issue/feature request make sure to post your bug/issues/feature requests on the forum in [this] thread.
+1. Make sure you're using the most updated stable or development versions of FreeCAD.
+2. **PLEASE PLEASE PLEASE** post to FreeCAD forum to verify the issue.
+3. Only after community vetting, open a ticket and link said thread to ticket and vice-a-versa.
+4. Post your **Help>About FreeCAD>Copy to clipboard** version info in to forum thread and ticket.
+5. Post a Step-By-Step explanation on how to recreate the issue.
+6. If possible, upload an example file to demonstrate problem.
+7. If there is a crash involved, please consider `Debugging <https://freecadweb.org/wiki/Debugging>`_ and attaching the traceback to the ticket.
 
 Documentation
 -------------
-FreeCAD uses MediaWiki for its documentation. To be able to modify the wiki, you must request access from [here]. 
-To get an Wiki account we require you to have an forum account with at least 1 post.
-Before you start changing things in the wiki please read this page: https://www.freecadweb.org/wiki/WikiPages
-There is a lot of rules on how to write on the wiki to keep it good, translated and up to date. Its a good idea to discuss the additions / changes you want to make in the wiki section of the forum before you follow through.
- 
+| FreeCAD uses `MediaWiki <https://mediawiki.org>`_ for its documentation. To be able to modify the wiki, you must `request access from the FreeCAD wiki admins <https://forum.freecadweb.org/viewtopic.php?f=21&t=6830>`_.
+| **Note:** To get an Wiki account we require you to have a forum account with at least 1 post.
+| Before you start changing things in the wiki please read the `WikiPages <https://www.freecadweb.org/wiki/WikiPages>`_ guidelines,
+| There are several rules on how to write on the wiki to keep it organized, high quality, translated and up to date. It's our practice to discuss the additions/changes one wants to make in the `FC wiki subforum <https://forum.freecadweb.org/viewforum.php?f=21>`_ prior to posting.
+
 Code
 ----
+The FreeCAD codebase is mostly C++ and Python, we are currently migrating to Python3, new contributions based on Python2.X are frowned upon.
+The git repo is hosted at https://github.com/FreeCAD/FreeCAD
 
-The FreeCAD codebase is mostly C++ and Python, we are currently migrating to Python3, new contributions based on Python2.X is frowned upon.
-The gitrepo is hosted at https://github.com/FreeCAD/FreeCAD
+Development
+-----------
+If you're interested developing for FreeCAD please look into::
 
-If you want to develop for FreeCAD you should look into creating your own workbench or modifying an existing workbench.
+1. creating your own workbench (See footnote[#f1]_ footnote[#f2]_  footnote[#f3]_)
+2. modifying an existing workbench (View source code of any external workbench at `FreeCAD-Addons Repo <https://github.com/FreeCAD/FreeCAD-addons>`_)
+3. creating your own macro (Read more about `FreeCAD Macros <https://www.freecadweb.org/wiki/Macros>`_ & the `FreeCAD Macros Repo <https://github.com/FreeCAD/FreeCAD-macros>`_ )
 
-Given that you have the dependencies to build and run FreeCAD this is how you checkout and build the code:
+Given that you have the dependencies to build and run FreeCAD this is how you checkout and build the code::
 
-git clone https://github.com/FreeCAD/FreeCAD.git freecad-code 
-cd freecad-code
-mkdir build
-cd build
-cmake .. 
-make -j$(nproc)
+  $ git clone https://github.com/FreeCAD/FreeCAD.git freecad-code
+  $ cd freecad-code
+  $ mkdir build
+  $ cd build
+  $ cmake ..
+  $ make -j$(nproc)
 
 More detailed instructions can be found [HERE]
+
+Footnotes
+---------
+.. [#f1] https://www.freecadweb.org/wiki/Workbench_creation)
+.. [#f2] https://www.freecadweb.org/wiki/Module_Creation)
+.. [#f3] https://github.com/FreeCAD/Workbench-Starterkit)
