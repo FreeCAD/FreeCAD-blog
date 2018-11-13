@@ -46,8 +46,6 @@ Code
 The FreeCAD codebase is mostly C++ and Python, we are currently migrating to Python3, new contributions based on Python2.X are frowned upon.
 The git repo is hosted at https://github.com/FreeCAD/FreeCAD
 
-.. image:: /images/codeLang20181113.png
-
 Development
 -----------
 If you're interested developing for FreeCAD please look into
