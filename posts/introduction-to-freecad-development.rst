@@ -7,7 +7,9 @@
 .. description: 
 .. type: text
 
-This is the first post in a series that aims to give you a basic understanding of how development for FreeCAD is done and how you can contribute.
+Have you ever wanted to contribute back to the project? Let us help you getting started!\
+
+If you want to contribute, write a thread about what you want to do in the developers corner and we will do our best to get you going. This post provides a brief overview of our workflow.
 
 Forum
 -----
@@ -44,27 +46,14 @@ Code
 The FreeCAD codebase is mostly C++ and Python, we are currently migrating to Python3, new contributions based on Python2.X are frowned upon.
 The git repo is hosted at https://github.com/FreeCAD/FreeCAD
 
+.. image:: /images/codeLang20181113.png
+
 Development
 -----------
-If you're interested developing for FreeCAD please look into::
+If you're interested developing for FreeCAD please look into
 
-1. creating your own workbench (See footnote[#f1]_ footnote[#f2]_  footnote[#f3]_)
-2. modifying an existing workbench (View source code of any external workbench at `FreeCAD-Addons Repo <https://github.com/FreeCAD/FreeCAD-addons>`_)
-3. creating your own macro (Read more about `FreeCAD Macros <https://www.freecadweb.org/wiki/Macros>`_ & the `FreeCAD Macros Repo <https://github.com/FreeCAD/FreeCAD-macros>`_ )
-
-Given that you have the dependencies to build and run FreeCAD this is how you checkout and build the code::
-
-  $ git clone https://github.com/FreeCAD/FreeCAD.git freecad-code
-  $ cd freecad-code
-  $ mkdir build
-  $ cd build
-  $ cmake ..
-  $ make -j$(nproc)
-
-More detailed instructions can be found [HERE]
-
-Footnotes
----------
-.. [#f1] https://www.freecadweb.org/wiki/Workbench_creation)
-.. [#f2] https://www.freecadweb.org/wiki/Module_Creation)
-.. [#f3] https://github.com/FreeCAD/Workbench-Starterkit)
+1. Read the `Source code wiki page <https://www.freecadweb.org/wiki/index.php?title=The_FreeCAD_source_code>`_ and check the `API reference <https://www.freecadweb.org/api/annotated.html>`_ .
+#. Creating your own workbench (See `Workbench Creation <https://www.freecadweb.org/wiki/Workbench_creation>`_ , `Module Creation <https://www.freecadweb.org/wiki/Module_Creation>`_ , `Workbench Starterkit <https://github.com/FreeCAD/Workbench-Starterkit>`_ )
+#. Modifying an existing workbench (View source code of any external workbench at `FreeCAD-Addons Repo <https://github.com/FreeCAD/FreeCAD-addons>`_ )
+#. Creating your own macro (Read more about `FreeCAD Macros <https://www.freecadweb.org/wiki/Macros>`_ and the `FreeCAD Macros Repo <https://github.com/FreeCAD/FreeCAD-macros>`_ )
+#. Building FreeCAD and writing C++ code (See `Compiling instructions <https://github.com/FreeCAD/FreeCAD#compiling>`_ )
